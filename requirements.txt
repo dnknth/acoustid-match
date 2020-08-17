@@ -1,0 +1,6 @@
+Django==2.2.*
+django-debug-toolbar==2.2
+docutils
+psycopg2-binary==2.8.*
+pyacoustid==1.2.*
+requests~=2.24.0

@@ -1,0 +1,193 @@
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by/2.0/deed.en
+ * html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header, footer, section, aside, nav, article { display: block;}
+
+body {
+    background-color: #ccc;
+    font-size: 1em;
+    font-family: Arial, SunSans-Regular, Sans-Serif;
+    color:#564b47;
+}
+
+pre, code {
+    font-size: 1.3em;
+}
+
+a { color: #999; }
+a:visited { color:#999; }
+a:hover { color: #ccc; }
+a:active { color:#000;}
+
+#content a:link, #content a:visited, aside a:link, aside a:visited {
+	color: rgb(179, 035, 000);
+	text-decoration: none;
+}
+
+a:active, a:hover {
+	color: rgb(179, 035, 000);
+	text-decoration: underline;
+}
+
+h1, h2 {
+    font-size:1.8em;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+h3 {
+    font-size:1.38em;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+img.download { vertical-align:middle; }
+img { border:none; }
+
+/* ----------container zentriert das layout-------------- */
+#container {
+    max-width: 1200px;
+    min-width: 960px;
+    margin: 10px  auto;
+    background-color: #eee;
+}
+
+/* ----------header for logo-------------- */
+header {
+	padding: 0px 20px;
+	background: #ccc ;
+}
+	
+header p {
+	text-transform:uppercase;
+	font-size:12px;
+
+}
+header img { padding: 0 0 10px; }
+
+
+/* -------------- navigavtion------------- */
+nav {
+    font-size: 16px;
+    background: #564B47;
+    color:#fff;
+}
+
+nav ul { 
+    list-style-type: none; 
+    margin:0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    margin:0;
+    color: #fff;
+    border-right:1px solid #97827F;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+nav a:visited { color:#fff; }
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* ----------------- messages --------------------- */
+ul.messages {
+    margin-bottom: 20px;
+}
+
+ul.messages li {
+    padding: 2px 16px;
+}
+
+ul.messages li.success {
+    background-color: #CFC;
+}
+
+ul.messages li.warning {
+    background-color: #FF6;
+}
+
+ul.messages li.error {
+    background-color: #F55;
+}
+
+ul.messages li.info {
+    background-color: #EFF;
+}
+
+/* ----------------- content --------------------- */
+section#content {
+    float: left;
+    width: 75%;
+    padding: 20px;
+    background-color: #fff;
+    min-height:500px;
+}
+
+p, pre{
+    padding:  0 0 20px;
+    line-height:1.5em;
+}
+
+article header{
+	background:#fff;
+	padding:0;
+	}
+	
+article footer{
+	border-bottom: 1px solid #564B47;
+	color:#564B47;
+	padding:0 0 5px;
+	margin:0 0 20px;
+}
+
+#content ul {
+    margin-left: 1ex;
+    padding-left: 1ex;
+}
+
+/* -------------- side infos ------------- */
+aside {
+    padding:20px;
+    float:right;
+    width: 25%;
+}
+
+/* -----------footer--------------------------- */
+footer.footer {
+    padding: 20px;
+    clear:both;
+    background-color: #564B47;
+    color:#fff;
+}
+
+footer a {
+	color: #999; text-decoration:none;
+}
+
+.footer-segment {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+}
+
+form#search-form {
+    float: right;
+    padding: 10px 30px;
+}

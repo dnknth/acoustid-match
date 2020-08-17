@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css" media="screen" />
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+<div id="container">
+
+    <header>
+        <a href="/"><img src="{{ STATIC_URL }}logo.png" /></a>
+    </header>
+
+    <nav>
+        <ul>
+            {% block navigation %}{% endblock %}
+            {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                  <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                {% endif %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+            {% block search %}{% endblock %}
+        </ul>
+    </nav>
+
+    <section id="content">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </section>
+
+    <aside>
+        {% block sidebar %}{% endblock %}
+    </aside>
+
+    <footer class="footer">		
+        {% block footer %}{% endblock %}
+    </footer>
+
+</div>
+</body>
+</html>
