@@ -1,0 +1,11 @@
+<p><canvas style="border: solid 2px #C5C5C5;" id="fp-img" width="0" height="32"></canvas></p>
+<input type="hidden" name="{{ widget.name }}" id="id_{{ widget.name }}" value="{% if widget.value != None %}{{ widget.value|stringformat:'s' }}{% endif %}" />
+
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function () {
+       const fp = [ {% if widget.value != None %}{{ widget.value|stringformat:'s' }}{% endif %} ];
+       paintFingerprint($('#fp-img')[0], fp);
+    });
+})(django.jQuery);
+</script>
